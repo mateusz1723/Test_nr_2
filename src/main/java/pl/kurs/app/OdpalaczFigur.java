@@ -31,10 +31,7 @@ public class OdpalaczFigur {
         System.out.println("Figura.stworzProstokat(10,20).hashCode() = " + Figura.stworzProstokat(10, 20).hashCode());
         System.out.println("Figura.stworzProstokat(10,20).hashCode() = " + Figura.stworzProstokat(10, 20).hashCode());
         System.out.println("Podczas tworzenia obiektu wystepuje wyraz new i to oznacza ze jest tworzonyn nowy obiekt");
-
-
     }
-
 
     static void wyswietlFigureZNajObwodem(Figura[] figury) {
         if (figury == null) {
@@ -55,9 +52,7 @@ public class OdpalaczFigur {
                 }
             }
             System.out.println("Figura z najwiekszym obwodem to : " + figury[i].toString() + " i wynosi: " + figury[i].calculatePerimeter());
-
         }
-
     }
 
     static void wyswietlFigureZNajPolem(Figura[] figury) {
@@ -79,7 +74,6 @@ public class OdpalaczFigur {
                 }
             }
             System.out.println("Figura z najwiekszym polem to : " + figury[i].toString() + " i wynosi: " + figury[i].calculateArea());
-
         }
     }
 }
