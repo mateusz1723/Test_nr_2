@@ -1,9 +1,7 @@
-package pl.kurs.exceptions;
+package pl.kurs.zad1.exceptions;
 
 public class UjemneLiczbyWyjatek extends Exception {
 
-    public UjemneLiczbyWyjatek() {
-    }
 
     public UjemneLiczbyWyjatek(String message) {
         super(message);
