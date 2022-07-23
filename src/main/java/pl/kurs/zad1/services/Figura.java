@@ -1,12 +1,12 @@
-package pl.kurs.services;
+package pl.kurs.zad1.services;
 
-import pl.kurs.exceptions.UjemneLiczbyWyjatek;
-import pl.kurs.models.Kolo;
-import pl.kurs.models.Kwadrat;
-import pl.kurs.models.Prostokat;
+import pl.kurs.zad1.exceptions.UjemneLiczbyWyjatek;
+import pl.kurs.zad1.models.Kolo;
+import pl.kurs.zad1.models.Kwadrat;
+import pl.kurs.zad1.models.Prostokat;
 
 
-public abstract class Figura {
+public abstract class Figura extends LicznikFigur{
 
 
     public static Figura stworzKwadrat(int a) throws UjemneLiczbyWyjatek {

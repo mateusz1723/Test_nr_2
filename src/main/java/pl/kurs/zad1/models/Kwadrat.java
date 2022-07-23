@@ -1,6 +1,6 @@
-package pl.kurs.models;
+package pl.kurs.zad1.models;
 
-import pl.kurs.services.Figura;
+import pl.kurs.zad1.services.Figura;
 
 public class Kwadrat extends Figura {
 
@@ -13,7 +13,7 @@ public class Kwadrat extends Figura {
 
     @Override
     public String toString() {
-        return "Kwadrat o boku " + a + ".";
+        return  "Kwadrat o boku " + a + ".";
     }
 
     @Override

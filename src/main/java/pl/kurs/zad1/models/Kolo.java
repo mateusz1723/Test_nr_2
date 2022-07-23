@@ -1,10 +1,11 @@
-package pl.kurs.models;
+package pl.kurs.zad1.models;
 
-import pl.kurs.services.Figura;
+import pl.kurs.zad1.services.Figura;
 
 public class Kolo extends Figura {
 
     private int r;
+
 
     public Kolo(int r) {
         this.r = r;
