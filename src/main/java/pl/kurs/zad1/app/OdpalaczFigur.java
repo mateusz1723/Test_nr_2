@@ -11,6 +11,7 @@ public class OdpalaczFigur {
             System.out.println(f);
         }
 
+
         System.out.println();
 
         wyswietlFigureZNajObwodem(figury);
@@ -35,43 +36,27 @@ public class OdpalaczFigur {
         if (figury == null) {
             System.out.println("Nie przekazano zadnej figury");
         } else {
-            int i = 0;
-            int j = 0;
-            while (i < figury.length || j < figury.length) {
-
-                if (i == figury.length || j == figury.length) {
-                    break;
-                } else {
-                    if (figury[i].calculatePerimeter() >= figury[j].calculatePerimeter()) {
-                        j++;
-                    } else {
-                        i++;
-                    }
-                }
+            Figura maxObwod = figury[0];
+            for (Figura f : figury) {
+                if (f.calculatePerimeter() > maxObwod.calculatePerimeter())
+                    maxObwod = f;
             }
-            System.out.println("Figura z najwiekszym obwodem to : " + figury[i].toString() + " i wynosi: " + figury[i].calculatePerimeter());
+            System.out.println("Figura z najwiekszym obwodem to : " + maxObwod + " i wynosi: " + maxObwod.calculatePerimeter());
         }
+
     }
+
 
     static void wyswietlFigureZNajPolem(Figura[] figury) {
         if (figury == null) {
             System.out.println("Nie przekazano zadnej figury");
         } else {
-            int i = 0;
-            int j = 0;
-            while (i < figury.length || j < figury.length) {
-
-                if (i == figury.length || j == figury.length) {
-                    break;
-                } else {
-                    if (figury[i].calculateArea() >= figury[j].calculateArea()) {
-                        j++;
-                    } else {
-                        i++;
-                    }
-                }
+            Figura maxPole = figury[0];
+            for (Figura f : figury) {
+                if (f.calculateArea() > maxPole.calculateArea())
+                    maxPole = f;
             }
-            System.out.println("Figura z najwiekszym polem to : " + figury[i].toString() + " i wynosi: " + figury[i].calculateArea());
+            System.out.println("Figura z najwiekszym polem to : " + maxPole + " i wynosi: " + maxPole.calculateArea());
         }
     }
 }
