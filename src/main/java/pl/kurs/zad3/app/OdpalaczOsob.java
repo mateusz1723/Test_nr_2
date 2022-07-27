@@ -4,8 +4,6 @@ import pl.kurs.zad3.models.Osoba;
 import pl.kurs.zad3.models.Pracownik;
 import pl.kurs.zad3.models.Student;
 
-import java.util.Arrays;
-
 public class OdpalaczOsob {
     public static void main(String[] args) {
 
@@ -20,7 +18,7 @@ public class OdpalaczOsob {
         Osoba ania = new Pracownik("Ania", "Kowalczyk", "93053585126", "Krakow", "Sekretarka", 4200);
         Osoba edyta = new Pracownik("Adyta", "Nowakowska", "85012132188", "Krakow", "Sprzataczka", 3200);
         Osoba sebastian = new Pracownik("Sebastian", "Dryga", "88051332139", "Krakow", "Konserwator", 4500);
-        Osoba monika = new Pracownik("Monika", "Dryga", "98031309148", "Krakow", "Konserwator", 4500);
+        Osoba monika = new Pracownik("Monika", "Dryga", "98031309148", "Krakow", "Konserwator", 5400);
 
 
         Osoba[] osoby = {pawel, ewa, adam, pawel, piotr, bartek, sebastian, szymon, marta, ania, edyta, monika};
@@ -30,28 +28,18 @@ public class OdpalaczOsob {
         wyswietlLiczbeKobietWTablicy(osoby);
 
 
-
     }
 
     static void wyswietlOsobeZNajDochodem(Osoba[] osoby) {
         if (osoby == null) {
             System.out.println("Nie przekazano zadnej osoby");
         } else {
-            int i = 0;
-            int j = 0;
-            while (i < osoby.length || j < osoby.length) {
-
-                if (i == osoby.length || j == osoby.length) {
-                    break;
-                } else {
-                    if (osoby[i].dochod() >= osoby[j].dochod()) {
-                        j++;
-                    } else {
-                        i++;
-                    }
-                }
+            Osoba maxDochod = osoby[0];
+            for (Osoba o : osoby) {
+                if (o.dochod() > maxDochod.dochod())
+                    maxDochod = o;
             }
-            System.out.println("Osoba z najwiekszym dochodem to " + osoby[i]);
+            System.out.println("Osoba z najwiekszym dochodem to " + maxDochod);
         }
     }
 
