@@ -6,15 +6,18 @@ public class Prostokat extends Figura {
 
     private int a;
     private int b;
+    private int licznik;
 
-    public Prostokat(int a, int b) {
+
+    public Prostokat(int a, int b , int licznikFigur) {
         this.a = a;
         this.b = b;
+        licznik = licznikFigur;
     }
 
     @Override
     public String toString() {
-        return "Prostokat o bokach " + a + "x" + b + ".";
+        return "Figura nr " + licznik + ": Prostokat o bokach " + a + "x" + b + ".";
     }
 
     @Override

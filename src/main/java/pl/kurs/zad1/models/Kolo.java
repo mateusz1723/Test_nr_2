@@ -5,15 +5,17 @@ import pl.kurs.zad1.services.Figura;
 public class Kolo extends Figura {
 
     private int r;
+    private int licznik;
 
-
-    public Kolo(int r) {
+    public Kolo(int r , int licznikFigur) {
         this.r = r;
+        licznik = licznikFigur;
+
     }
 
     @Override
     public String toString() {
-        return "Kolo o promieniu " + r + ".";
+        return "Figura nr " + licznik + ": Kolo o promieniu " + r + ".";
     }
 
     @Override
